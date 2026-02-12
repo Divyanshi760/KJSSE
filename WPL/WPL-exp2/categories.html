@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <style>
+        .categories-sidebar {
+            background-color: #FFFFFF;
+            border: 2px solid #FFE066;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            padding: 25px;
+            margin: 20px;
+            max-width: 350px;
+        }
+        
+        .categories-sidebar h2 {
+            color: #2D2D2D;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF8C42;
+        }
+        
+        .categories-sidebar li {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            list-style: none;
+            background-color: #FBF8F3;
+        }
+        
+        .categories-sidebar li:hover {
+            background-color: #FFE066;
+            color: #2D2D2D;
+            transform: translateX(8px);
+            box-shadow: 0 4px 15px rgba(255, 224, 102, 0.4);
+        }
+        
+        .categories-sidebar ul,
+        .categories-sidebar ol {
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1> Book Categories</h1>
+    <p>Explore our wide range of book categories</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="featured.html">Featured</a>
+    <a href="register.html">Register</a>
+    <a href="table.html">Price Table</a>
+    <a href="imagemap.html">Store Map</a>
+    <a href="media.html">Media</a>
+</nav>
+<section class="categories-sidebar">
+<h2>Top Categories</h2>
+<ol>
+    <li><b>Fiction</b></li>
+    <li><b>Non-Fiction</b></li>
+    <li><b>Academic</b></li>
+</ol>
+<h2>Genres</h2>
+<ul>
+    <li>Self-Help</li>
+    <li>Thriller</li>
+    <li>Science Fiction</li>
+</ul>
+</section>
+<section class="categories-sidebar">
+<h2>Formats</h2>
+<dl>
+    <dt><b>Paperback</b></dt>
+    <dd>Lightweight and affordable</dd>
+
+    <dt><b>Hardcover</b></dt>
+    <dd>Durable premium edition</dd>
+
+    <dt><b>eBook</b></dt>
+    <dd>Digital readable format</dd>
+</dl>
+</section>
+<footer>
+    <p>© Div's 2025 Online Book Store</p>
+</footer>
+</body>
+</html>

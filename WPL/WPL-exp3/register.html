@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Div's Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<header>
+    <h1> New User Registration</h1>
+    <p>Join our community of book lovers</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="featured.html">Featured</a>
+    <a href="register.html">Register</a>
+    <a href="table.html">Price Table</a>
+    <a href="imagemap.html">Store Map</a>
+    <a href="media.html">Media</a>
+</nav>
+<section>
+<form>
+<fieldset>
+<legend>New User Registration</legend>
+
+<label>Name:</label>
+<input type="text" required placeholder="Enter Name" autofocus><br><br>
+
+<label>Email:</label>
+<input type="email" required placeholder="Enter Email"><br><br>
+
+<label>Password:</label>
+<input type="password" required pattern=".{6,}" placeholder="Min 6 characters"><br><br>
+
+<label>Gender:</label>
+<input type="radio" name="g" id="male"> <label for="male" style="min-width: auto;">Male</label>
+<input type="radio" name="g" id="female"> <label for="female" style="min-width: auto;">Female</label><br><br>
+
+<label>Interests:</label>
+<input type="checkbox" id="fiction"> <label for="fiction" style="min-width: auto;">Fiction</label>
+<input type="checkbox" id="academic"> <label for="academic" style="min-width: auto;">Academic</label><br><br>
+
+<label>Date of Birth:</label>
+<input type="date"><br><br>
+<label>Upload ID:</label>
+<input type="file"><br><br>
+<input type="submit" value="Register Now">
+
+</fieldset>
+</form>
+</section>
+<footer>
+    <p>© Div's 2025 Online Book Store</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* =====================================================
+   Task 7: Table Styling for Price List
+   Professional table with zebra-striping and styling
+   ===================================================== */
+
+/* Table base styling with collapsed borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+}
+
+/* Table caption styling */
+caption {
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B6B 100%);
+    color: #FFFFFF;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Header row styling with background color */
+thead tr {
+    background-color: #1E1E2E;
+}
+
+th {
+    background-color: #1E1E2E;
+    color: #FFFFFF;
+    padding: 15px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Table cell styling with center alignment */
+td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #F5F0E8;
+    color: #2D2D2D;
+    text-align: center;
+}
+
+/* Zebra-striping for even rows using nth-child */
+tbody tr:nth-child(even) {
+    background-color: #FBF8F3;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: #FFE066;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Table footer styling */
+tfoot tr {
+    background-color: #F5F0E8;
+}
+
+tfoot td {
+    font-style: italic;
+    color: #666666;
+    text-align: center;
+}
+
+/* Mark/highlight for prices */
+table mark {
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B6B 100%);
+    color: #FFFFFF;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+}

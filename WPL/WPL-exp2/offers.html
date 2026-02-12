@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 15px;
+            min-height: auto;
+            background-color: #FBF8F3;
+        }
+        .offer-box {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8C42 100%);
+            color: #FFFFFF;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 107, 107, 0.5),
+                            0 0 30px rgba(255, 140, 66, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(255, 107, 107, 0.8),
+                            0 0 60px rgba(255, 140, 66, 0.5),
+                            0 0 80px rgba(255, 224, 102, 0.3);
+            }
+        }
+        .hot-text {
+            color: #8B0000;
+            font-weight: 800;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+            background-color: #FFE066;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .offer-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 0 0 15px 0;
+        }
+        .offer-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            text-align: left;
+        }
+        .offer-box li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        } 
+        .offer-box li:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: translateX(5px);
+        }
+        
+        .urgent {
+            font-size: 1.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="offer-box">
+    <h3 class="offer-title">🎉 <span class="hot-text">HOT</span> Ongoing Offers</h3>
+    <ul>
+        <li> Flat 20% off on Fiction Books</li>
+        <li> Buy 1 Get 1 Free on Selected Titles</li>
+        <li> Extra 10% Student Discount</li>
+    </ul>
+    <p class="urgent"><strong> Hurry!</strong> Offers valid till stock lasts.</p>
+</div>
+
+</body>
+</html>

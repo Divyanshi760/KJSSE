@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Navigation - Image Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1> Store Navigation</h1>
+    <p>Click different areas to explore sections</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="featured.html">Featured</a>
+    <a href="register.html">Register</a>
+    <a href="table.html">Price Table</a>
+    <a href="imagemap.html">Store Map</a>
+    <a href="media.html">Media</a>
+</nav>
+<section>
+<h2>Book Store Navigation</h2>
+<p>Click different areas of the banner to explore sections.</p>
+<img src="OnlineBookStore/images/banner.jpg"
+     alt="Online Book Store Banner"
+     usemap="#bookstoremap"
+     width="800"
+     height="400"
+     style="max-width: 100%; height: auto;">
+<map name="bookstoremap">
+    <area shape="rect"
+          coords="0,0,400,400"
+          href="featured.html"
+          alt="New Arrivals"
+          title="New Arrivals">
+
+    <area shape="rect"
+          coords="400,0,800,200"
+          href="table.html"
+          alt="Best Sellers"
+          title="Best Sellers">
+
+    <area shape="rect"
+          coords="400,0,600,200"
+          href="offers.html"
+          alt="Offers"
+          title="Offers">
+
+</map>
+</section>
+<footer>
+    <p>© Div's 2025 Online Book Store</p>
+</footer>
+</body>
+</html>

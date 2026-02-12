@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Div's Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<header>
+    <h1> New User Registration</h1>
+    <p>Join our community of book lovers</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="featured.html">Featured</a>
+    <a href="register.html">Register</a>
+    <a href="table.html">Price Table</a>
+    <a href="imagemap.html">Store Map</a>
+    <a href="media.html">Media</a>
+</nav>
+<section>
+<form id="registrationForm" onsubmit="return validateForm()">
+<fieldset>
+<legend>New User Registration</legend>
+
+<label>Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter Name" autofocus>
+<span id="nameError" class="error"></span><br><br>
+
+<label>Email:</label>
+<input type="text" id="email" name="email" placeholder="Enter Email">
+<span id="emailError" class="error"></span><br><br>
+
+<label>Password:</label>
+<input type="password" id="password" name="password" placeholder="Min 6 characters with letters and numbers">
+<span id="passwordError" class="error"></span><br><br>
+
+<label>Age:</label>
+<input type="text" id="age" name="age" placeholder="Enter age (18-100)">
+<span id="ageError" class="error"></span><br><br>
+
+<label>Gender:</label>
+<input type="radio" name="g" id="male"> <label for="male" style="min-width: auto;">Male</label>
+<input type="radio" name="g" id="female"> <label for="female" style="min-width: auto;">Female</label><br><br>
+
+<label>Interests:</label>
+<input type="checkbox" id="fiction"> <label for="fiction" style="min-width: auto;">Fiction</label>
+<input type="checkbox" id="academic"> <label for="academic" style="min-width: auto;">Academic</label><br><br>
+
+<label>Date of Birth:</label>
+<input type="date"><br><br>
+<label>Upload ID:</label>
+<input type="file"><br><br>
+<input type="submit" value="Register Now">
+
+</fieldset>
+</form>
+</section>
+<footer>
+    <p>© Div's 2025 Online Book Store</p>
+</footer>
+
+<script>
+function validateForm() {
+    let isValid = true;
+    
+    // Clear all previous error messages
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+    document.getElementById("ageError").textContent = "";
+    
+    // Name validation
+    const name = document.getElementById("name").value.trim();
+    if (name === '') {
+        document.getElementById("nameError").textContent = "Name must not be blank";
+        isValid = false;
+    }
+    
+    // Email validation
+    const email = document.getElementById("email").value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '') {
+        document.getElementById("emailError").textContent = "Email must not be blank";
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Please enter a valid email address";
+        isValid = false;
+    }
+    
+    // Password validation (min 6 chars, at least 1 number & 1 letter)
+    const password = document.getElementById("password").value;
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    if (password === '') {
+        document.getElementById("passwordError").textContent = "Password must not be blank";
+        isValid = false;
+    } else if (!passwordPattern.test(password)) {
+        document.getElementById("passwordError").textContent = 
+            "Password must be at least 6 characters, include letters and numbers";
+        isValid = false;
+    }
+    
+    // Age validation (must be a number between 18 and 100)
+    const age = document.getElementById("age").value.trim();
+    if (age === '') {
+        document.getElementById("ageError").textContent = "Age must not be blank";
+        isValid = false;
+    } else if (!/^\d+$/.test(age) || age < 18 || age > 100) {
+        document.getElementById("ageError").textContent = "Enter a valid age (18-100)";
+        isValid = false;
+    }
+    
+    // If form is valid, show success message
+    if (isValid) {
+        alert("Registration successful! Form submitted.");
+    }
+    
+    return isValid; 
+}
+</script>
+
+<script src="scripts.js"></script>
+</body>
+</html>

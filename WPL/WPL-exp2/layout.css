@@ -1,0 +1,112 @@
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-layout {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar h3 {
+    color: #2D2D2D;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #FF8C42;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #666666;
+}
+
+.sidebar li:hover {
+    background-color: #FFE066;
+    color: #2D2D2D;
+    transform: translateX(5px);
+}
+.content {
+    flex: 1;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+footer {
+    background-color: #1E1E2E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+}
+.float-layout {
+    overflow: hidden;
+    padding: 30px;
+}
+
+.float-sidebar {
+    float: left;
+    width: 250px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-right: 30px;
+}
+
+.float-content {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+    
+    .float-sidebar {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
